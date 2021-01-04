@@ -1,0 +1,66 @@
+:root {
+    --font-family: sans-serif;
+    --foreground: #202020;
+    --background: #e0e0e0;
+
+    --background-brighter: #f0f0f0;
+    --background-x: #f0a0a0;
+    --background-o: #a0f0a0; 
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+
+    font-family: var(--font-family);
+    color: var(--foreground);
+    background-color: var(--background);
+}
+
+#tictactoe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: min-content;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+button {
+    height: 2em;
+    padding: 0.5em;
+    margin: 0.5em;
+    color: var(--foreground);
+    background-color: var(--background-brighter);
+    border: 1px solid var(--foreground);
+    outline: none;
+    cursor: pointer;
+}
+
+.square {
+    width: 2em;
+}
+
+.square-x, .square-o {
+    cursor: default;
+}
+
+.square-x {
+    background-color: var(--background-x);
+}
+
+.square-o {
+    background-color: var(--background-o);
+}
+
+#undo, #reset {
+    width: auto;
+}
+
