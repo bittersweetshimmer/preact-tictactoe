@@ -69,6 +69,7 @@ const TicTacToe = props => {
             const nextBoard = board.map((symbol, i) => i === head ? EMPTY : symbol);
 
             setBoard(nextBoard);
+            setCurrentPlayer(currentPlayer === X ? O : X);
             setHistory(tail);
         }
     };
